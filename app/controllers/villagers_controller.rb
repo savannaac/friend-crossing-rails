@@ -53,6 +53,6 @@ class VillagersController < ApplicationController
         end
 
         def villager_params
-            params.require(:villager).permit(:user_id, :name, :species, :gender, :personality, :birthday, :catchphrase, :status, :img_url)
+            params.require(:villager).permit(:user_id, :name, :species, :gender, :personality, :birthday, :catchphrase, :status, :img_url, :comments)
         end
 end

@@ -5,3 +5,35 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+# User.create([
+#     { 
+#       username: "First", email: "first@gmail.com", password: "123456"
+#     }
+# ])
+
+# Villager.create([
+#     {
+#       user_id: 1,
+#       name: "Kyle",
+#       species: "wolf",
+#       gender: "male",
+#       personality: "smug",
+#       birthday: "December 6",
+#       catchphrase: "alpha",
+#       status: "want",
+#       img_url: "https://dodo.ac/np/images/thumb/4/46/Kyle_NH.png/300px-Kyle_NH.png"
+#     },
+
+#     {
+#       user_id: 1,
+#       name: "Judy",
+#       species: "bear cub",
+#       gender: "female",
+#       personality: "snooty",
+#       birthday: "March 10",
+#       catchphrase: "myohmy",
+#       status: "have",
+#       img_url: "https://dodo.ac/np/images/d/d4/Judy_NH.png"
+#     }
+# ])
