@@ -29,10 +29,10 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: friend_crossing
+  username: <%= ENV["POSTGRES_USER"] %>
 
   # The password associated with the postgres role (username).
-  #password:
+  password: <%= ENV["ADNAT_DATABASE_PASSWORD"] %>
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: friend_crossing_production
-  username: friend_crossing
+  username: <%= ENV["POSTGRES_USER"] %>
   password: <%= ENV["FRIEND_CROSSING_DATABASE_PASSWORD"] %>
