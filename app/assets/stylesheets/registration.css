@@ -1,0 +1,17 @@
+input[type=text], [type=number], [type=date], [type=time] {
+    border: 1px solid #82A2D5;
+    font-family: 'Montserrat', sans-serif;
+    height: 2rem;
+    resize: vertical;
+    width: 14rem;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #06871F;
+    border-radius: 15px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    height: 2rem;
+    width: 10rem;
+  }
