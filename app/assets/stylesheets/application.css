@@ -15,7 +15,7 @@
  */
 
  body {
-    background-color: #fff;
+    background-color: transparent;
  }
 
  h1 {
@@ -29,9 +29,41 @@
  }
 
  h2 {
+    color: #c48d3f;
     font-family: 'Raleway', sans-serif;
     font-size: 2.5rem;
     font-weight: 600;
+    margin-left: 2rem;
+    margin-top: 3rem;
+ }
+
+ .row {
+    display: flex; 
+    flex-direction: row;
+ }
+
+ .registration {
+    background-color: #1ED760;
+    border: 1px solid transparent;
+    border-radius: 500px;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    height: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-left: 2rem;
+    margin-top: -1.5rem;
+    min-width: 2rem;
+    outline: none;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: .3s;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    white-space: normal;
  }
 
  .header {
@@ -41,10 +73,10 @@
     border-radius: 8px;
     display: flex; 
     flex-direction: row;
+    float: top;
     height: 7rem;
-    margin: auto;
-    margin-bottom: 0rem;
-    margin-top: 5rem;
+    margin-top: 4.2rem;
+    position: absolute; top: 0; left: 25%;
     width: 50vw;
  }
 
@@ -54,6 +86,12 @@
     height: 60vh;
     margin: auto;
     width: 50vw;
+
+    left: 50%;
+    margin-right: -50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
  }
 
  .container-left {
@@ -66,8 +104,8 @@
     flex: 0 0 65%;
     }
     
-    .container-right {
-        background-image:linear-gradient(175deg, rgba(0,0,0,0) 95%, #8da389 95%),
+.container-right {
+    background-image:linear-gradient(175deg, rgba(0,0,0,0) 95%, #8da389 95%),
         linear-gradient( 85deg, rgba(0,0,0,0) 95%, #8da389 95%),
         linear-gradient(175deg, rgba(0,0,0,0) 90%, #b4b07f 90%),
         linear-gradient( 85deg, rgba(0,0,0,0) 92%, #b4b07f 92%),

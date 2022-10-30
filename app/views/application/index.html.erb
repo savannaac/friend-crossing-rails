@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="app/assets/stylesheets/welcome.css">
+
+<% if current_user %>  
+   
+<% else %>
+    <div class="wrapper">
+        <div class="container-left";>
+            <h2>go ahead, finesse your friends</h2>
+
+            <div class="registration-links">
+                <div class="row">
+                    <%= link_to "sign up", new_user_registration_path, {:class => "registration"} %><br>
+                    <%= link_to "log in", new_user_session_path, {:class => "registration"} %>
+                </div>
+            </div>  
+        </div>
+
+        <div class="container-right";>
+            <h2></h2>
+        </div>
+    </div>
+
+<% end %>
