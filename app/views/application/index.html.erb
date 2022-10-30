@@ -1,20 +1,31 @@
-<% if current_user %>  
-   
+<% if current_user %> 
+    <div class="wrapper">
+            <div class="container-left";>
+                <h2><%= current_user.username %>'s villagers</h2>
+                <% all_villagers = current_user.villagers %>
+                <% all_villagers.each do |villager| %>
+                    <h3><%= villager.name %>, <%= villager.status %> </h3> <button><a href="/villagers/<%=villager.id%>" style="color: #e0fff3;; text-decoration:none;">view</a></button><br>
+                <% end %> 
+            </div>
+
+            <div class="container-right";>
+                <%= button_to "sign out", destroy_user_session_path, method: "delete"%><br><br>
+            </div>
+        </div>
+    
 <% else %>
     <div class="wrapper">
         <div class="container-left";>
-            <h2>go ahead, finesse your friends</h2>
-
+        </div>
+        
+        <div class="container-right";>
+        <h2>go ahead, finesse your friends</h2>
             <div class="registration-links">
                 <div class="row">
                     <%= link_to "sign up", new_user_registration_path, {:class => "registration"} %><br>
                     <%= link_to "log in", new_user_session_path, {:class => "registration"} %>
                 </div>
             </div>  
-        </div>
-
-        <div class="container-right";>
-            <h2></h2>
         </div>
     </div>
 

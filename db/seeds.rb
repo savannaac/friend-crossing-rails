@@ -37,3 +37,17 @@
 #       img_url: "https://dodo.ac/np/images/d/d4/Judy_NH.png"
 #     }
 # ])
+
+# Villager.create([
+#     {
+#       user_id: 2,
+#       name: "Marshal",
+#       species: "squirrel",
+#       gender: "male",
+#       personality: "smug",
+#       birthday: "September 29",
+#       catchphrase: "sulky",
+#       status: "want",
+#       img_url: "https://dodo.ac/np/images/thumb/d/da/Marshal_NH.png/300px-Marshal_NH.png"
+#     },
+# ])
