@@ -3,7 +3,7 @@
 <% if @villager.user_id == current_user.id %>
     <div class="wrapper">
             <div class="container-left">
-                <%= button_to "sign out", destroy_user_session_path, method: "delete"%><br><br>
+            <%= button_to "log out", destroy_user_session_path, method: "delete", :class => "logout-button"%><br><br>
                 
                 <div class="nav-menu">
                     <%= link_to "home", root_path, { :class => "nav-links" } %><br><br><br>

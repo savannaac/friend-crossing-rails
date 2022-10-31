@@ -3,7 +3,7 @@
 <% if current_user %> 
     <div class="wrapper">
             <div class="container-left">
-                <%= button_to "sign out", destroy_user_session_path, method: "delete"%><br><br>
+            <%= button_to "log out", destroy_user_session_path, method: "delete", :class => "logout-button"%><br><br>
                 
                 <div class="nav-menu">
                     <%= link_to "back", :back, { :class => "nav-links" } %>
