@@ -2,34 +2,34 @@
 
 <div class="wrapper">
         <div class="container-left";>
-            <center><h2>log in</h2></center> 
-
-            <center>
-                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                    <div class="field">
-                    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email" %>
-                    </div><br>
-                
-                    <div class="field">
-                    <%= f.password_field :password, autocomplete: "current-password", placeholder: "password" %>
-                    </div>
-                
-                    <% if devise_mapping.rememberable? %>
-                    <div class="field">
-                        <%= f.check_box :remember_me %>
-                        <%= f.label :remember_me %>
-                    </div>
-                    <% end %>
-                
-                    <div class="actions">
-                    <%= f.submit "log in" %>
-                    </div>
-                <% end %>
-            </center>
+        
         </div>
 
         <div class="container-right";>
-            <h2></h2>
+            <div class="right-content">
+                <h2>log in</h2>
+
+                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                    <div class="field">
+                        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email" %>
+                    </div><br>
+                    
+                    <div class="field">
+                        <%= f.password_field :password, autocomplete: "current-password", placeholder: "password" %>
+                    </div>
+                    
+                    <% if devise_mapping.rememberable? %>
+                        <div class="field">
+                            <%= f.check_box :remember_me %>
+                            <%= f.label :remember_me %>
+                        </div>
+                    <% end %>
+                    
+                    <div class="actions">
+                        <%= f.submit "log in" %>
+                    </div>
+                <% end %>
+            </div>
         </div>
 </div>
 

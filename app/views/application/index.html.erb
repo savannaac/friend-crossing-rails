@@ -1,17 +1,33 @@
+<link rel="stylesheet" href="app/assets/stylesheets/registration.css">
+
 <% if current_user %> 
     <div class="wrapper">
-            <div class="container-left";>
-                <h2><%= current_user.username %>'s villagers</h2>
-                <% all_villagers = current_user.villagers %>
-                <% all_villagers.each do |villager| %>
-                    <h3><%= villager.name %>, <%= villager.status %> </h3> <button><a href="/villagers/<%=villager.id%>" style="color: #e0fff3;; text-decoration:none;">view</a></button><br>
-                <% end %> 
+            <div class="container-left">
+                <%= button_to "sign out", destroy_user_session_path, method: "delete"%><br><br>
+                
+                <div class="nav-menu">
+                    <%= link_to "add villager" , new_user_villager_path(current_user), {:class => "nav-links"}%>
+                </div>
             </div>
 
             <div class="container-right";>
-                <%= button_to "sign out", destroy_user_session_path, method: "delete"%><br><br>
+                <div class="right-content">
+                    <h2><%= current_user.username %>'s villagers</h2>
+
+                    <% if current_user.villagers.first.nil? %>
+                        <p>Hmmm, no villagers here. . .<br><br> 
+                        Love cats with glasses like ✧Raymond✧? Not the biggest fan of ⋆Beardo⋆?<br>
+                        Click "add villager" to track all your fav friends.</p>
+                    <% else %>
+                        <% all_villagers = current_user.villagers %>
+                        <% all_villagers.each do |villager| %>
+                            <h3>⭑ <%= villager.name %>, <%= villager.status %> </h3> 
+                            <%= link_to "view" , user_villagers_path(current_user), {:class => "view"}%><br>
+                        <% end %>
+                    <% end %>
+                </div>
             </div>
-        </div>
+    </div>
     
 <% else %>
     <div class="wrapper">
