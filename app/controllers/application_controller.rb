@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
     # adds name field to devise
     before_action :configure_permitted_parameters, if: :devise_controller?
 
+    def after_sign_in_path_for(resource)
+     root_path
+   end
+
     protected
          def configure_permitted_parameters
               devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation)}

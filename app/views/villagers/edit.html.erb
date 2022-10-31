@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="app/assets/stylesheets/villager.css">
 
-<% if current_user %> 
+<% if @villager.user_id == current_user.id %> 
     <div class="wrapper">
             <div class="container-left">
                 <%= button_to "sign out", destroy_user_session_path, method: "delete"%><br><br>
