@@ -70,3 +70,12 @@ input[type=button], input[type=submit], input[type=reset] {
 .margins {
     margin-left: 2rem; 
 }
+
+.margin-less {
+    margin-bottom: 2rem;
+    margin-top: -1.5rem;
+}
+
+.villager-info {
+    margin-left: 2rem;
+}

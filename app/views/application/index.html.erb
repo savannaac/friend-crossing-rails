@@ -22,8 +22,8 @@
                         <% else %>
                             <% all_villagers = current_user.villagers %>
                             <% all_villagers.each do |villager| %>
-                                <h3>⭑ <%= villager.name %>, <%= villager.status %> </h3> 
-                                <%= link_to "view" , user_villagers_path(current_user), {:class => "view"}%><br>
+                                <h3>✪ <%= villager.name %>, <%= villager.status %> </h3> 
+                                <%= link_to "view" , user_villager_path(current_user, villager), {:class => "view"}%><br>
                             <% end %>
                         <% end %></center>
                     </div>

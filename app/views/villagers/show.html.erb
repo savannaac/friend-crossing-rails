@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="app/assets/stylesheets/villager.css">
+
+<% if current_user %> 
+    <div class="wrapper">
+            <div class="container-left">
+                <%= button_to "sign out", destroy_user_session_path, method: "delete"%><br><br>
+                
+                <div class="nav-menu">
+                    <%= link_to "home", root_path, { :class => "nav-links" } %><br><br><br>
+                    <%= link_to "add new villager" , new_user_villager_path(current_user), {:class => "nav-links"}%><br><br><br>
+                    <%= link_to "edit villager" , edit_user_villager_path(current_user, @villager), {:class => "nav-links"}%><br><br><br>
+                    
+                </div>
+            </div>
+
+            <div class="container-right";>
+                <div class="right-content">
+                    <div class="card">
+                        <center><h2><%= @villager.name %></h2>
+                       <div class="margin-less">
+                            <h3><%= @villager.catchphrase %><h3>
+                        </div>
+                        <%= image_tag(@villager.img_url, height: "130rem", width: "100rem") %></center>
+
+                        <div class="villager-info">
+                            <h3><%= @villager.birthday %><br><br>
+                            <%= @villager.gender %> | <%= @villager.species %> | <%= @villager.personality %><br>
+                            <%= @villager.status %> | <%= @villager.comments %></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+<% else %>
+    <div class="wrapper">
+        <div class="container-left";>
+        </div>
+        
+        <div class="container-right";>
+        <h2>go ahead, finesse your friends</h2>
+            <div class="registration-links">
+                <div class="row">
+                    <%= link_to "sign up", new_user_registration_path, {:class => "registration"} %><br>
+                    <%= link_to "log in", new_user_session_path, {:class => "registration"} %>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+<% end %>

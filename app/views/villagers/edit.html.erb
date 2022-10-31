@@ -13,7 +13,7 @@
             <div class="container-right";>
                 <div class="right-content">
                     <div class="card">
-                        <center><h2>add a villager</h2></center>
+                        <center><h2>edit <%= @villager.name %></h2></center>
 
                         <%= form_with model: @villager, url: user_villagers_path(current_user, @villager), method: "post" do |f| %>
                             <%= f.text_field :img_url, placeholder: "photo url of villager ٭" %><br><br>
