@@ -23,7 +23,7 @@
     font-family: 'Abril Fatface', cursive;
     font-size: 2vmax;
     letter-spacing: 2px;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     margin-left: -1rem;
     text-shadow: -1px -1px 0 #8D5A08, 1px -1px 0 #8D5A08, -1px 1px 0 #8D5A08, 1px 1px 0 #8D5A08;   
  }
@@ -34,7 +34,7 @@
     font-size: 2.5rem;
     font-weight: 600;
     margin-left: 1rem;
-    margin-top: 23vh;
+    margin-top: 25vh;
 }
 
 h3 {
@@ -50,6 +50,18 @@ p {
 
 a {
     text-decoration: none;
+}
+
+.header {
+    /* background-color: #fff; */
+    /* border-radius: 50px; */
+    display: flex; 
+    flex-direction: row;
+    float: top;
+    height: 7rem;
+    margin-top: 2rem;
+    position: absolute; top: 0; left: 42%;
+    width: 25vw;
 }
 
 .nav-menu {
@@ -74,12 +86,11 @@ a {
     font-size: 1rem;
     padding: 1rem;
 }
-}
 
  .row {
     display: flex; 
     flex-direction: row;
- }
+}
 
  .card {
     background-color: #F8FAFA;
@@ -144,16 +155,4 @@ a {
         box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
         transform: scale(1.01);
     } 
- }
-
- .header {
-    background-color: #fff;
-    border-radius: 50px;
-    display: flex; 
-    flex-direction: row;
-    float: top;
-    height: 7rem;
-    margin-top: 2rem;
-    position: absolute; top: 0; left: 42%;
-    width: 25vw;
  }
