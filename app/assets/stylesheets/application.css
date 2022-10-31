@@ -61,8 +61,19 @@ a {
     border-bottom: 7px solid #fff;
     color: #FFF;
     font-family: 'Raleway', sans-serif;  
-    font-size: 2rem;
+    font-size: 2.5vmax;
     padding: 1rem;
+}
+
+.logout-button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif; 
+    font-size: 1rem;
+    padding: 1rem;
+}
 }
 
  .row {
@@ -77,6 +88,15 @@ a {
     margin: auto;
     padding-bottom: 1rem;
     width: 25rem;
+}
+
+ .registration-card {
+    background-color: #F8FAFA;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: auto;
+    padding-bottom: 1rem;
+    width: 30rem;
 }
 
  .registration {

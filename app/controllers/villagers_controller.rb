@@ -44,7 +44,7 @@ class VillagersController < ApplicationController
     def destroy
         @villager.destroy
     
-        redirect_to user_villagers_path(current_user)
+        redirect_to root_path
     end
 
     private 

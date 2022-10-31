@@ -13,7 +13,7 @@
  }
 
 .container-left {
-    background-color: #6EEEF5;
+    background-color: #FC00E5;
     background-image:linear-gradient(175deg, rgba(0,0,0,0) 95%, #8da389 95%),
         linear-gradient( 85deg, rgba(0,0,0,0) 95%, #8da389 95%),
         linear-gradient(175deg, rgba(0,0,0,0) 90%, #b4b07f 90%),
@@ -53,7 +53,7 @@ input[type=text], [type=number], [type=date], [type=time], [type=select] {
     height: 1.5rem;
     margin-left: 2rem;
     resize: vertical;
-    width: 9rem;
+    width: 11rem;
 }
 
 input[type=button], input[type=submit], input[type=reset] {
@@ -78,4 +78,18 @@ input[type=button], input[type=submit], input[type=reset] {
 
 .villager-info {
     margin-left: 2rem;
+}
+
+.button {
+    background-color: #FC00E5;
+    border: 0;
+    color: #fff;
+    font-family: 'Raleway', sans-serif; 
+    font-size: 2.5vmax;
+    padding: 1rem;
+}
+
+.border {
+    border-bottom: 7px solid #fff;
+    width: 8rem;
 }

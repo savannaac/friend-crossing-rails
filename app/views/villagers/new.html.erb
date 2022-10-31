@@ -32,9 +32,9 @@
 
                             <%= f.text_field :catchphrase, placeholder: "villager's catchphrase" %><br><br>
 
-                            <center><%= f.text_area(:comments, size: '40x5') %>
+                            <%= f.text_field :comments, placeholder: "comments" %><br><br>
                         
-                            <%= f.submit "add" %></center>
+                            <center><%= f.submit "add" %></center>
                         <% end %>
                     </div>
                 </div>
@@ -42,19 +42,5 @@
     </div>
     
 <% else %>
-    <div class="wrapper">
-        <div class="container-left";>
-        </div>
-        
-        <div class="container-right";>
-        <h2>go ahead, finesse your friends</h2>
-            <div class="registration-links">
-                <div class="row">
-                    <%= link_to "sign up", new_user_registration_path, {:class => "registration"} %><br>
-                    <%= link_to "log in", new_user_session_path, {:class => "registration"} %>
-                </div>
-            </div>  
-        </div>
-    </div>
-
+    <%= render "partials/registration_links" %>
 <% end %>
