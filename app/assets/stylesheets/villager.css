@@ -46,3 +46,27 @@
     overflow: scroll;
     width: auto;
 }
+
+input[type=text], [type=number], [type=date], [type=time], [type=select] {
+    border: 1px solid #B6BFC0;
+    font-family: 'Raleway', sans-serif; 
+    height: 1.5rem;
+    margin-left: 2rem;
+    resize: vertical;
+    width: 9rem;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #06871F;
+    border-radius: 15px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif; 
+    font-size: 1rem;
+    height: 2rem;
+    margin-left: 2rem;
+    width: 10rem;
+}
+
+.margins {
+    margin-left: 2rem; 
+}

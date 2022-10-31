@@ -65,23 +65,6 @@ a {
     padding: 1rem;
 }
 
-input[type=text], [type=number], [type=date], [type=time] {
-    border: 1px solid #B6BFC0;
-    height: 1.5rem;
-    resize: vertical;
-    width: 9rem;
-}
-
-input[type=button], input[type=submit], input[type=reset] {
-    background-color: #06871F;
-    border-radius: 15px;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    height: 2rem;
-    width: 10rem;
-  }
-
  .row {
     display: flex; 
     flex-direction: row;

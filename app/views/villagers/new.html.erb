@@ -16,12 +16,25 @@
                         <center><h2>add a villager</h2></center>
 
                         <%= form_with model: @villager, url: user_villagers_path(current_user, @villager), method: "post" do |f| %>
-                            <%= f.text_field :img_url, placeholder: "photo url of villager" %><br>
+                            <%= f.text_field :img_url, placeholder: "photo url of villager ٭" %><br><br>
+                            <%= f.text_field :name, placeholder: "villager's name" %>
+
+                            <%= f.collection_select :gender, Villager::GENDER, :to_s, :to_s %> <%= f.collection_select :status, Villager::STATUS_CHOICES, :to_s, :to_s %><br><br>
+
+                            <%= f.text_field :birthday, placeholder: "villager's birthday" %>
+
+                            <div class="margins">
+                                <p><%= f.label "personality" %>: </p>
+                                <%= f.collection_select :personality, Villager::PERSONALITY_CHOICES, :to_s, :to_s %>
+                                <p><%= f.label "species" %>: </p>
+                                <%= f.collection_select :species, Villager::SPECIES_CHOICES, :to_s, :to_s %><br><br>
+                            </div>
+
+                            <%= f.text_field :catchphrase, placeholder: "villager's catchphrase" %><br><br>
+
+                            <center><%= f.text_area(:comment, size: '40x5') %>
                         
-                            <%= f.text_field :name, placeholder: "villager's name" %><br>
-                            
-                        
-                            <%= f.submit "add" %>
+                            <%= f.submit "add" %></center>
                         <% end %>
                     </div>
                 </div>
