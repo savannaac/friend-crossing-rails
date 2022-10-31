@@ -7,34 +7,36 @@
 
         <div class="container-right";>
             <div class="right-content">
-                <h2>sign up</h2>
+                <div class="card">
+                    <center><h2>sign up</h2>
 
-                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                    <%= render "devise/shared/error_messages", resource: resource %>
-                
-                    <div class="field">
-                        <%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder: "username" %><br /><br />
-                    </div>
-                
-                    <div class="field">
-                        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email" %><br />
-                    </div>
-                
-                    <div class="field">
-                        <% if @minimum_password_length %>
-                            <p>(<%= @minimum_password_length %> characters minimum)</p>
-                        <% end %>
-                        <%= f.password_field :password, autocomplete: "new-password", placeholder: "password" %>
-                    </div>
-                
-                    <div class="field">
-                        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "confirm password" %><br /><br />
-                    </div>
-                
-                    <div class="actions">
-                        <%= f.submit "sign up" %>
-                    </div>
-                <% end %>
+                    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                        <%= render "devise/shared/error_messages", resource: resource %>
+                    
+                        <div class="field">
+                            <%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder: "username" %><br /><br />
+                        </div>
+                    
+                        <div class="field">
+                            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email" %><br />
+                        </div>
+                    
+                        <div class="field">
+                            <% if @minimum_password_length %>
+                                <p>(<%= @minimum_password_length %> characters minimum)</p>
+                            <% end %>
+                            <%= f.password_field :password, autocomplete: "new-password", placeholder: "password" %>
+                        </div>
+                    
+                        <div class="field">
+                            <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "confirm password" %><br /><br />
+                        </div>
+                    
+                        <div class="actions">
+                            <%= f.submit "sign up" %>
+                        </div>
+                    <% end %></center>
+                </div>
             </div>
         </div>
 </div>

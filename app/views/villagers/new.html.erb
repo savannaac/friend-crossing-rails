@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="app/assets/stylesheets/villager.css">
+
+<% if current_user %> 
+    <div class="wrapper">
+            <div class="container-left">
+                <%= button_to "sign out", destroy_user_session_path, method: "delete"%><br><br>
+                
+                <div class="nav-menu">
+                    <%= link_to "back", :back, { :class => "nav-links" } %>
+                </div>
+            </div>
+
+            <div class="container-right";>
+                <div class="right-content">
+                    <div class="card">
+                        <center><h2>add a villager</h2></center>
+
+                        <%= form_with model: @villager, url: user_villagers_path(current_user, @villager), method: "post" do |f| %>
+                            <%= f.text_field :img_url, placeholder: "photo url of villager" %><br>
+                        
+                            <%= f.text_field :name, placeholder: "villager's name" %><br>
+                            
+                        
+                            <%= f.submit "add" %>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+<% else %>
+    <div class="wrapper">
+        <div class="container-left";>
+        </div>
+        
+        <div class="container-right";>
+        <h2>go ahead, finesse your friends</h2>
+            <div class="registration-links">
+                <div class="row">
+                    <%= link_to "sign up", new_user_registration_path, {:class => "registration"} %><br>
+                    <%= link_to "log in", new_user_session_path, {:class => "registration"} %>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+<% end %>

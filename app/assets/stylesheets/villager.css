@@ -10,7 +10,7 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-}
+ }
 
 .container-left {
     background-color: #6EEEF5;
@@ -31,15 +31,18 @@
 }
     
 .container-right {
-    background-image: url("white-sketch");
+    background-image: url("campsite-villagers");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     border: 0;
     
     flex: 1;
 }
 
 .right-content {
+    height: 55rem;
     margin-left: 20vh;
     margin-top: -2rem;
+    overflow: scroll;
+    width: auto;
 }

@@ -33,7 +33,7 @@
     font-family: 'Raleway', sans-serif;
     font-size: 2.5rem;
     font-weight: 600;
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-top: 23vh;
 }
 
@@ -65,10 +65,36 @@ a {
     padding: 1rem;
 }
 
+input[type=text], [type=number], [type=date], [type=time] {
+    border: 1px solid #B6BFC0;
+    height: 1.5rem;
+    resize: vertical;
+    width: 9rem;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #06871F;
+    border-radius: 15px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    height: 2rem;
+    width: 10rem;
+  }
+
  .row {
     display: flex; 
     flex-direction: row;
  }
+
+ .card {
+    background-color: #F8FAFA;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: auto;
+    padding-bottom: 1rem;
+    width: 25rem;
+}
 
  .registration {
     background-color: #06871F;
@@ -119,13 +145,12 @@ a {
 
  .header {
     background-color: #fff;
-    border-bottom: 2px dotted #8D5A08; 
-    border-radius: 8px;
+    border-radius: 50px;
     display: flex; 
     flex-direction: row;
     float: top;
     height: 7rem;
     margin-top: 2rem;
     position: absolute; top: 0; left: 42%;
-    width: 31vw;
+    width: 25vw;
  }
