@@ -16,7 +16,7 @@
 
  body {
     background-color: transparent;
- }
+}
 
  h1 {
     color: #c48d3f;
@@ -26,7 +26,7 @@
     margin-top: 2.5rem;
     margin-left: -1rem;
     text-shadow: -1px -1px 0 #8D5A08, 1px -1px 0 #8D5A08, -1px 1px 0 #8D5A08, 1px 1px 0 #8D5A08;   
- }
+}
 
  h2 {
     color: #c48d3f;
@@ -64,6 +64,12 @@ a {
     width: 25vw;
 }
 
+/* responsibve nav */
+
+.nav > .nav-button {
+    display: none;
+}
+  
 .nav-menu {
     margin-left: 4rem;
     margin-top: 13vh;
@@ -76,6 +82,54 @@ a {
     font-size: 2.5vmax;
     padding: 1rem;
 }
+  
+.nav > #nav-check {
+    display: none;
+}
+  
+  @media (max-width:600px) {
+    .nav > .nav-button {
+        color: #fff;
+      display: inline-block;
+      font-family: 'Raleway', sans-serif;  
+      font-size: 75px;
+      left: 110px;
+      top: 0;
+      position: absolute;
+    }
+    .nav > .nav-button > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-button > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      color: #333;
+    }
+    
+    .nav > .nav-menu {
+      position: absolute;
+      display: block;
+      width: 20%;
+      background-color: transparent;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 4px;
+      left: 0px;
+    }
+    .nav > .nav-menu > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-menu {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-menu {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+}
 
 .logout-button {
     background-color: transparent;
@@ -87,13 +141,13 @@ a {
     padding: 1rem;
 }
 
- .row {
+.row {
     display: flex; 
     flex-direction: row;
 }
 
- .card {
-    background-color: #F8FAFA;
+.card {
+    background-color: #F2F4F5;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     margin: auto;
@@ -101,7 +155,7 @@ a {
     width: 25rem;
 }
 
- .registration-card {
+.registration-card {
     background-color: #F8FAFA;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -110,7 +164,7 @@ a {
     width: 30rem;
 }
 
- .registration {
+.registration {
     background-color: #06871F;
     border: 1px solid transparent;
     border-radius: 500px;
@@ -133,7 +187,7 @@ a {
     white-space: normal;
  }
 
- .view {
+.view {
     font-family: 'Raleway', sans-serif;
 
     background: #EDFEFF;

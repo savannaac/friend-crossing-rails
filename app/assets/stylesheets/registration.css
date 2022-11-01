@@ -32,8 +32,13 @@
     
 .registration-container-right {
     background-image: url("empty-campsite");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+
     border: 0;
     
     flex: 1;
